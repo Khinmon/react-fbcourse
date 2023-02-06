@@ -1,22 +1,14 @@
 import React, { Component } from "react";
 
-class Title extends Component {
+class Menu extends Component {
   render() {
-    return (
-      <div>
-        <h1>{this.props.name}</h1>
-      </div>
-    );
+    return <div>{this.props.children}</div>;
   }
 }
 
-class Header extends Component {
+class Nav extends Component {
   render() {
-    return (
-      <div>
-        <Title name={this.props.name} />
-      </div>
-    );
+    return <div>{this.props.children}</div>;
   }
 }
 
@@ -24,7 +16,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header name="App Title" />
+        <Nav>
+          <h1 style={{ background: "black", padding: 20, color: "white" }}>
+            Digital Hunter
+          </h1>
+        </Nav>
+        <Menu>
+          <h1>Hello React</h1>
+          <p>Component Composition</p>
+        </Menu>
       </div>
     );
   }
