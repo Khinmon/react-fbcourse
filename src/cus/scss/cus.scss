@@ -1,0 +1,28 @@
+$primary: #007bff;
+$white: #fff;
+$danger: #dc2626;
+$warning: #facc15;
+
+.background {
+  border-radius: $primary;
+  background-color: $primary;
+  color: $white;
+  h1 {
+    color: $danger;
+  }
+  p {
+    color: $warning;
+  }
+}
+
+.btn {
+  background-color: $warning;
+  padding: 10px;
+  border: 0px;
+  border-radius: 15px;
+  transition: 0.5;
+  &:hover {
+    background-color: danger;
+    color: $white;
+  }
+}
