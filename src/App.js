@@ -1,16 +1,11 @@
-import React, { Component } from "react";
-import "./cus/css/cus.css";
+import React from "react";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="background">
-        <h1>Brand & Logo</h1>
-        <p>This is Paragraph</p>
-        <button class="btn">Click Me</button>
-      </div>
-    );
-  }
-}
+const App = (props) => {
+  return (
+    <button id="btn" type="button" className="btn btn-primary">
+      Primary
+    </button>
+  );
+};
 
 export default App;
