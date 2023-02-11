@@ -1,11 +1,7 @@
-import { Routes, Route, Link, useParams } from "react-router-dom";
+import { Routes, Route, Link, NavLink, useParams } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
-
-const Human = (props) => {
-  const { human } = useParams();
-  return <h1>Profile {human}</h1>;
-};
+import "./Main.css";
 
 const App = (props) => {
   return (
@@ -13,14 +9,22 @@ const App = (props) => {
       <h1>You can do it. I belive in you. </h1>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" className={({ isActive }) => isActive && "active"}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => isActive && "active"}
+          >
+            About
+          </NavLink>
         </li>
       </ul>
       <Routes>
-        <Route path="/:human" element={<Human />} />
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
       </Routes>
     </div>
   );
