@@ -6,21 +6,17 @@ import "./Main.css";
 const App = (props) => {
   return (
     <div>
-      <h1 className="duc">You can do it. I belive in you. </h1>
-      <p>ကျေးဇူးတင်စွာဖြင့်</p>
+      <h1>You can do it. I belive in you. </h1>
       <ul>
         <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active" : null)}
-          >
+          <NavLink to="/" className={({ isActive }) => isActive && "active"}>
             Home
           </NavLink>
         </li>
         <li>
           <NavLink
             to="/about"
-            className={({ isActive }) => (isActive ? "active" : null)}
+            className={({ isActive }) => isActive && "active"}
           >
             About
           </NavLink>

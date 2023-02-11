@@ -1,4 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+@font-face {
+  font-family: "mm";
+  font-weight: normal;
+  src: url("https://github.com/kosanlinhtike/unicode/blob/main/mm_unicode_font/MyanmarSagar/MyanmarSagar.ttf");
+}
+* {
+  font-family: mm;
+}
+
+.duc {
+  font-family: "Pacifico", cursive;
+}
+
 .active {
   color: green;
   text-decoration: none;
+}
+
+.img {
+  width: 20%;
 }
